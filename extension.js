@@ -44,13 +44,8 @@ exports.activate = context => {
       return false;
     }
 
-    let lastMatch = matchArray[found].trim().replaceAll('\\', '/');
-    let prefix = 'file:///';
-    let domain = lastMatch.split('/')[0];
-    if (domain.indexOf('.') > -1) {
-      prefix = 'file://';
-    }
-    let url = vscode.Uri.parse(prefix + lastMatch);
+    let lastMatch = matchArray[found].trim();
+    let url = parseUri(lastMatch);
     vscode.commands.executeCommand('vscode.open', url);
   });
 
