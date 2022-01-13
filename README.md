@@ -16,5 +16,7 @@ Open file : alt+a
 ## Examples:
 
 'D:\LocalFolder\Sample-query.sql'
+'192.168.0.101\D\web.config'
+'internal-domain.com\D\web.config'
 
 
